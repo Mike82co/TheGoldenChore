@@ -22,6 +22,9 @@ function addChore(choreName, description, value, dateDue, assignedTo ){
     Actions.parentPage()
 }
 
+
+
+
 function sendData(choreData) {
     fetch(choreAPI, {
         method: "POST",
@@ -38,6 +41,15 @@ function sendData(choreData) {
     setTimeout(() => {
     }, 4000);
 }
+function deleteData(item) {
+    return fetch(choreAPI + '/' + item, {
+      method: "DELETE"
+    }).then(response =>
+      response.json().then(json => {
+        return json;
+      })
+    );
+  }
 
 export default class AddChoreForm extends React.Component {
     constructor(props) {
@@ -125,7 +137,7 @@ export default class AddChoreForm extends React.Component {
                         
                         <Button onPress={()=>{
                             addChore(this.state.choreName.text, this.state.description.text, this.state.value.text, this.state.chosenDate, this.state.selected2)
-
+                            
                         }}><Text>Submit</Text></Button>
                         
                         </Body>

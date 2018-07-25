@@ -9,6 +9,8 @@ import KidPage from './Scenes/KidPage'
 import AddKidForm from './Scenes/AddKidForm'
 import AddChoreForm from './Scenes/AddChoreForm'
 import DisplayAllChores from './Scenes/DisplayAllChores'
+import DeleteChore from './Scenes/DeleteChore'
+import DeleteKid from './Scenes/DeleteKid'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -46,8 +48,10 @@ export default class App extends React.Component {
         <Scene key="kidPage" component={KidPage} hideNavBar />
         <Scene key="AddKidForm" component ={AddKidForm} hideNavBar />
         <Scene key="AddChoreForm" component ={AddChoreForm} hideNavBar /> 
-        <Scene key="DisplayAllChores" component ={DisplayAllChores} hideNavBar /> 
-        
+        <Scene key="DisplayAllChores" component ={DisplayAllChores} hideNavBar />
+        <Scene key="DeleteChore" component={DeleteChore} hideNavBar />
+        <Scene key="DeleteKid" component={DeleteKid} hideNavBar />
+
       </Stack>
     </Router>
     );

@@ -71,11 +71,12 @@ export default class Home extends React.Component {
             
                 <Row style={{ backgroundColor: '#00CE9F', height: 300 }}>
                     <Content>
-                        {/* <Button success block rounded style={{margin:18}} 
+                        <Button success block rounded style={{margin:18}} 
                                 onPress={()=>{
+                                    Actions.DisplayAllChores(this.state)
                                 }}>
                             <Text>Show Chores</Text>
-                        </Button> */}
+                        </Button>
 
                         <Grid>
                             <Button 
@@ -90,7 +91,10 @@ export default class Home extends React.Component {
                             <Button 
                                 danger
                                 block 
-                                style={{margin:3}}>
+                                style={{margin:3}}
+                                onPress={()=>{
+                                    Actions.DeleteKid(this.state)
+                                }}>
                                     <Text>Delete Kid</Text>
                             </Button>
                         </Grid>
@@ -108,7 +112,11 @@ export default class Home extends React.Component {
                             <Button 
                                 danger 
                                 block 
-                                style={{margin:3}}>
+                                style={{margin:3}}
+                                onPress={()=>{
+                                    Actions.DeleteChore(this.state)
+                                }}>
+                                
                                 <Text>Delete Chore</Text>
                             </Button>
                         </Grid>
