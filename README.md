@@ -6,7 +6,7 @@ An app for parents and kids to make household chore tracking easy
 
 This is still in development and is not deployed. Clone or download this repo to have a look at the code
 ![Screen Shot](Screenshot_20180723-095357.png)
-![Screen Shot](Screenshot_20180723-104633 (2).png)
+![Screen Shot](Screenshot_20180723-104633(2).png)
 ### Prerequisites
 You will need an android device or an emulator.
 ```
